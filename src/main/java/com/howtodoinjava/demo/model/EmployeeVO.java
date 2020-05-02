@@ -1,18 +1,13 @@
 package com.howtodoinjava.demo.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class EmployeeVO implements Serializable
 {
-    private static final long serialVersionUID = 1L;
-
     private Integer id;
     private String firstName;
     private String lastName;
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Integer getId() {
         return id;
@@ -42,5 +37,20 @@ public class EmployeeVO implements Serializable
     public String toString() {
         return "EmployeeVO [id=" + id + ", firstName=" + firstName
                 + ", lastName=" + lastName + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EmployeeVO that = (EmployeeVO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(firstName, that.firstName) &&
+                Objects.equals(lastName, that.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName);
     }
 }
