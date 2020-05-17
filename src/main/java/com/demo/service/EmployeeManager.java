@@ -1,8 +1,8 @@
-package com.howtodoinjava.demo.service;
+package com.demo.service;
 
 import java.util.List;
 
-import com.howtodoinjava.demo.model.Employee;
+import com.demo.model.Employee;
 
 public interface EmployeeManager
 {

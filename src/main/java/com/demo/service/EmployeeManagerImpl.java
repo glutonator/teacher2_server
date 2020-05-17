@@ -1,9 +1,9 @@
-package com.howtodoinjava.demo.service;
+package com.demo.service;
 
 import java.util.List;
 
-import com.howtodoinjava.demo.model.Employee;
-import com.howtodoinjava.demo.repository.EmployeeRepository;
+import com.demo.model.Employee;
+import com.demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

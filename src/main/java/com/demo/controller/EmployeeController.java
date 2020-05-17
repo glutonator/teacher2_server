@@ -1,10 +1,10 @@
-package com.howtodoinjava.demo.controller;
+package com.demo.controller;
 
-import com.howtodoinjava.demo.model.Employee;
+import com.demo.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.howtodoinjava.demo.service.EmployeeManager;
+import com.demo.service.EmployeeManager;
 
 import java.util.List;
 
