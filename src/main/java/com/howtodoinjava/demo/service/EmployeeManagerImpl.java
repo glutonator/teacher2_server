@@ -2,21 +2,23 @@ package com.howtodoinjava.demo.service;
 
 import java.util.List;
 
-import com.howtodoinjava.demo.service.EmployeeManager;
+import com.howtodoinjava.demo.model.Employee;
+import com.howtodoinjava.demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.howtodoinjava.demo.dao.EmployeeDAO;
-import com.howtodoinjava.demo.model.EmployeeVO;
 
 @Service
 public class EmployeeManagerImpl implements EmployeeManager {
 
-    @Autowired
-    EmployeeDAO dao;
 
-    public List<EmployeeVO> getAllEmployees()
+    @Autowired
+    EmployeeRepository employeeRepository;
+
+    public List<Employee> getAllEmployees()
     {
-        return dao.getAllEmployees();
+        List<Employee> all = employeeRepository.findAll();
+        return all;
+
+//        return dao.getAllEmployees();
     }
 }

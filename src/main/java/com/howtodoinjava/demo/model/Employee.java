@@ -1,10 +1,14 @@
 package com.howtodoinjava.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class EmployeeVO implements Serializable
+@Entity
+public class Employee implements Serializable
 {
+    @Id
     private Integer id;
     private String firstName;
     private String lastName;
@@ -35,7 +39,7 @@ public class EmployeeVO implements Serializable
 
     @Override
     public String toString() {
-        return "EmployeeVO [id=" + id + ", firstName=" + firstName
+        return "Employee [id=" + id + ", firstName=" + firstName
                 + ", lastName=" + lastName + "]";
     }
 
@@ -43,7 +47,7 @@ public class EmployeeVO implements Serializable
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        EmployeeVO that = (EmployeeVO) o;
+        Employee that = (Employee) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(firstName, that.firstName) &&
                 Objects.equals(lastName, that.lastName);
